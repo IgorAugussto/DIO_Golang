@@ -51,6 +51,7 @@ func kelvinToCelsius(tempK float64) float64 {
 func main() {
 	tempK := K
 	tempC := tempK - 273.15
+	var enter string
 
 	fmt.Printf("A temperatura de ebulição da água em Kelvin é de %.2f, a temperatuda de ebulição da água em Celsius é %.2f \n",
 		tempK, tempC)
@@ -75,4 +76,5 @@ func main() {
 			fmt.Println("Resposta inválida. Digite 'S' ou 'N'.")
 		}
 	}
+	fmt.Scanln(enter)
 }
