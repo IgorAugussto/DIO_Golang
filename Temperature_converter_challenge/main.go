@@ -24,11 +24,15 @@ func ChooseConversion() {
 		fmt.Printf("digite o valor a ser convertido: ")
 		fmt.Scan(&tempC)
 		celsiusToKelvin(tempC)
+		fmt.Println("Programa encerrado. Pressione Enter para sair.")
+		fmt.Scanln()
 	} else if option == "K" {
 		// Chama a função para converter de Kelvin para Celsius
 		fmt.Printf("digite o valor a ser convertido: ")
 		fmt.Scan(&tempK)
 		kelvinToCelsius(tempK)
+		fmt.Println("Programa encerrado. Pressione Enter para sair.")
+		fmt.Scanln()
 	} else {
 		fmt.Println("Opção inválida. Digite 'C' ou 'K'.")
 	}
@@ -43,7 +47,6 @@ func celsiusToKelvin(tempC float64) float64 {
 func kelvinToCelsius(tempK float64) float64 {
 	tempC := tempK - 273.15
 	fmt.Scanln("%.2f Kelvin são %.2f Celsius", tempK, tempC)
-
 	return tempC
 
 }
@@ -51,7 +54,6 @@ func kelvinToCelsius(tempK float64) float64 {
 func main() {
 	tempK := K
 	tempC := tempK - 273.15
-	var enter string
 
 	fmt.Printf("A temperatura de ebulição da água em Kelvin é de %.2f, a temperatuda de ebulição da água em Celsius é %.2f \n",
 		tempK, tempC)
@@ -76,5 +78,5 @@ func main() {
 			fmt.Println("Resposta inválida. Digite 'S' ou 'N'.")
 		}
 	}
-	fmt.Scanln(enter)
+	fmt.Scanln()
 }
